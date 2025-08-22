@@ -1,0 +1,46 @@
+/* Minimal, pulled-back, readable */
+:root{
+  --text:#111;
+  --muted:#666;
+  --border:#e9e9e9;
+  --max: 880px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:inherit;text-decoration:underline}
+a:hover{text-decoration:none}
+.container{max-width:var(--max);margin:0 auto;padding:28px}
+.header{border-bottom:1px solid var(--border)}
+.brand{font-weight:600;letter-spacing:.2px}
+.nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.nav a{text-decoration:none;padding:8px 6px;border-bottom:2px solid transparent}
+.nav a.active,[aria-current="page"]{border-bottom-color:#000}
+main{padding:32px 0}
+h1{font-size:28px;line-height:1.2;margin:.2em 0 .6em}
+h2{font-size:20px;margin:1.4em 0 .6em}
+h3{font-size:16px;margin:1.2em 0 .4em}
+p,li{color:#222}
+.muted{color:var(--muted)}
+.lede{font-size:18px;color:#222;max-width:60ch}
+.footer{border-top:1px solid var(--border);padding:20px 0;margin-top:40px;font-size:14px;color:var(--muted)}
+
+/* Simple image grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+.card{border:1px solid var(--border);padding:12px;border-radius:10px}
+.card img{width:100%;height:auto;display:block;border-radius:6px;background:#f7f7f7}
+.caption{font-size:14px;color:var(--muted);margin-top:8px}
+
+/* Lists */
+.press-list{list-style:none;padding:0;margin:0}
+.press-list li{padding:12px 0;border-bottom:1px solid var(--border)}
+.meta{font-size:13px;color:var(--muted)}
+
+/* Small screens */
+@media (max-width:520px){
+  .nav{gap:10px}
+  .container{padding:22px}
+}
