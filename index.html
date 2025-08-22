@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Connor Wright — Artist</title>
+  <meta name="description" content="The personal site of artist Connor Wright." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="brand">Connor Wright</div>
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="current-work.html">Current Work</a>
+        <a href="early-works.html">Early Works</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Artist</h1>
+    <p class="lede">
+      New York–based artist working primarily in large-scale oil-stick on canvas.
+      The work navigates performance and construction of masculinity, queerness,
+      and memory through decisive gesture and disciplined color.
+    </p>
+
+    <h2>Selected Works (current)</h2>
+    <div class="grid">
+      <!-- Replace with your actual images (recommended 1600px wide). -->
+      <figure class="card">
+        <img src="images/current/work-01.jpg" alt="Untitled, oil stick on canvas" loading="lazy">
+        <figcaption class="caption">Untitled, oil stick on canvas, 80 × 80 in</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/current/work-02.jpg" alt="Untitled, oil stick on canvas" loading="lazy">
+        <figcaption class="caption">Untitled, oil stick on canvas, 60 × 72 in</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="images/current/work-03.jpg" alt="Untitled, oil stick on canvas" loading="lazy">
+        <figcaption class="caption">Untitled, oil stick on canvas, 48 × 60 in</figcaption>
+      </figure>
+    </div>
+
+    <p class="muted" style="margin-top:16px">
+      More in <a href="current-work.html">Current Work</a>.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Connor Wright</div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+</body>
+</html>
