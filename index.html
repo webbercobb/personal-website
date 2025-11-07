@@ -1,60 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Connor Wright — Artist</title>
-  <meta name="description" content="The personal site of artist Connor Wright." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connor Wright</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="brand">Connor Wright</div>
-      <nav class="nav" aria-label="Primary">
-        <a class="active" href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About</a>
-        <a href="news.html">News</a>
-        <a href="current-work.html">Current Work</a>
-        <a href="early-works.html">Early Works</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+
+  <!-- Fixed Header -->
+  <header>
+    <div class="name">CONNOR WRIGHT</div>
+    <nav>
+      <a href="#home">Work</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <h1>Artist</h1>
-    <p class="lede">
-      New York–based artist working primarily in large-scale oil-stick on canvas.
-      The work navigates performance and construction of masculinity, queerness,
-      and memory through decisive gesture and disciplined color.
-    </p>
-
-    <h2>Selected Works (current)</h2>
-    <div class="grid">
-      <!-- Replace with your actual images (recommended 1600px wide). -->
-      <figure class="card">
-        <img src="images/current/work-01.jpg" alt="Untitled, oil stick on canvas" loading="lazy">
-        <figcaption class="caption">Untitled, oil stick on canvas, 80 × 80 in</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="images/current/work-02.jpg" alt="Untitled, oil stick on canvas" loading="lazy">
-        <figcaption class="caption">Untitled, oil stick on canvas, 60 × 72 in</figcaption>
-      </figure>
-      <figure class="card">
-        <img src="images/current/work-03.jpg" alt="Untitled, oil stick on canvas" loading="lazy">
-        <figcaption class="caption">Untitled, oil stick on canvas, 48 × 60 in</figcaption>
-      </figure>
+  <!-- Homepage / Work Section -->
+  <section id="home" class="work">
+    <div class="work-grid">
+      <!-- First image also serves as homepage hero -->
+      <div class="work-item">
+        <img src="images/image1.jpg" alt="Artwork 1">
+        <div class="overlay">
+          <div class="overlay-text">
+            Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen
+          </div>
+        </div>
+      </div>
+      <div class="work-item"><img src="images/image2.jpg" alt="Artwork 2"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image3.jpg" alt="Artwork 3"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image4.jpg" alt="Artwork 4"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image5.jpg" alt="Artwork 5"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image6.jpg" alt="Artwork 6"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image7.jpg" alt="Artwork 7"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image8.jpg" alt="Artwork 8"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image9.jpg" alt="Artwork 9"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
+      <div class="work-item"><img src="images/image10.jpg" alt="Artwork 10"><div class="overlay"><div class="overlay-text">Untitled<br>100 x 100 in<br>Oil stick and spray paint on linen</div></div></div>
     </div>
+  </section>
 
-    <p class="muted" style="margin-top:16px">
-      More in <a href="current-work.html">Current Work</a>.
+  <!-- CV Section -->
+  <section id="cv">
+    <h2>CV</h2>
+    <p><strong>CONNOR WRIGHT</strong><br>CV 2025</p>
+
+    <h3>EDUCATION</h3>
+    <p>2020 – Bachelor of Arts in Cognitive Neuroscience, University of Pennsylvania, Philadelphia, PA</p>
+
+    <h3>SELECTED PROJECTS AND EXHIBITIONS</h3>
+    <p>
+    2021–Present – Private Patronship, Ongoing<br>
+    2021 – Makoto South Beach, Miami, FL<br>
+    2020 – St. Louis Bank Commission, St. Louis, MO<br>
+    2020 – “Say Their Names Cemetery,” Minneapolis, MN<br>
+    2020 – Private Commission: Ben Franklin Mosaic, Philadelphia, PA<br>
+    2019 – Private Commission: Beatles Guitar Pick Mural, Philadelphia, PA<br>
+    2018 – Private Commission: Einstein Mural, Philadelphia, PA<br>
+    2017 – Maybelline Mural, New York, NY<br>
+    2016 – Alan Turing Mural, Facebook HQ, Menlo Park, CA<br>
+    2016 – St. Louis Skyline Mural, St. Louis, MO<br>
+    2015 – Stan Musial Mural, St. Louis, MO
     </p>
-  </main>
 
-  <footer class="footer">
-    <div class="container">© <span id="y"></span> Connor Wright</div>
-  </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear()</script>
+    <h3>SELECTED PRESS</h3>
+    <p>
+    Apple News, “Top Photos of 2020”<br>
+    BET, “20 Striking Protest Photos from Peaceful Protests”<br>
+    BuzzFeed News, “George Floyd Remembered in Photos”<br>
+    Forbes, “4 Effective DEI Strategies Business Leaders Should Measure”<br>
+    KARE 11, “‘Say Their Names’ Cemetery Honors African Americans Killed by Police”<br>
+    KSTP, “‘Say Their Names’ Cemetery Memorializes Black Americans Killed by Police”<br>
+    Newsweek, “George Floyd Memorial Honors Black Americans Killed by Police”<br>
+    Reuters, “Minneapolis Residents Come Together After George Floyd’s Death”<br>
+    Sophisticated Living, “Connor Wright’s Evolution”<br>
+    St. Louis Post-Dispatch, “High Schooler Crafts St. Louis Mural Using 300,000 Crayons”<br>
+    St. Louis Post-Dispatch, “Priory Senior Twists Nearly 6,000 Rubik’s Cubes into Mural of Stan Musial”<br>
+    Star Tribune, “Two Young Artists Create Cemetery in Minneapolis”<br>
+    The New York Times, Front Page, June 9, 2020<br>
+    The New York Times, “Chauvin Trial and George Floyd’s Legacy”<br>
+    The Washington Post, “Study on Police Killings Being Undercounted”<br>
+    TIME, “Top 100 Photos of 2020”<br>
+    TIME, “Top 100 Photos of 2021”<br>
+    U.S. News, “Minneapolis Residents Seek Change After Police Reform Defeat”<br>
+    YouTube, “Say Their Names Cemetery Memorial”
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For inquiries, please email <a href="mailto:connor@connorwright.net">connor@connorwright.net</a></p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
