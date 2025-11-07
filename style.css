@@ -23,7 +23,6 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  /* NO background on the header itself */
   background: none;
 }
 
@@ -178,26 +177,18 @@ nav a:hover, nav a.active {
   opacity: 1;
 }
 
-/* CV and Contact Sections */
-#cv-content, #contact-content {
+/* Contact Section */
+#contact-content {
   max-width: 900px;
   margin: 120px auto 80px;
   padding: 0 20px;
 }
 
-h2, h3 {
-  font-weight: normal;
-  margin-top: 40px;
-}
-
-h2 {
+#contact-content h2 {
   font-size: 24px;
   margin-bottom: 30px;
-}
-
-h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-weight: normal;
+  margin-top: 40px;
 }
 
 #contact-content a {
@@ -209,6 +200,85 @@ h3 {
 
 #contact-content a:hover {
   opacity: 0.7;
+}
+
+/* CV Section - Completely Redesigned */
+#cv-content {
+  max-width: none;
+  margin: 120px auto 80px;
+  padding: 0;
+}
+
+.cv-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cv-title h1 {
+  font-family: 'Michroma', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: clamp(22px, 4vw, 34px);
+  margin: 0 0 .25rem 0;
+  font-weight: normal;
+}
+
+.cv-title .cv-sub {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 16px);
+  opacity: .75;
+  margin-bottom: 1.25rem;
+}
+
+/* CV Section headings */
+.cv-section {
+  margin-top: 2.25rem;
+}
+
+.cv-section h2 {
+  font-family: 'Michroma', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: clamp(14px, 1.8vw, 15px);
+  margin: 0 0 .75rem 0;
+  font-weight: normal;
+}
+
+/* CV Entries: tidy grid with a date column */
+.cv-items {
+  display: grid;
+  row-gap: .6rem;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 16px;
+  align-items: start;
+}
+
+.entry-year {
+  font-family: 'Michroma', sans-serif;
+  letter-spacing: .06em;
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: .7;
+  text-transform: uppercase;
+}
+
+.entry-body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(14px, 2.2vw, 16px);
+  line-height: 1.6;
+  letter-spacing: .01em;
+  font-weight: 300;
+}
+
+/* CV Spacing rhythm */
+.cv-section + .cv-section {
+  margin-top: 2.4rem;
 }
 
 /* Responsive tweaks */
@@ -266,6 +336,11 @@ h3 {
     min-width: 2000px;
     min-height: 2000px;
   }
+  
+  /* CV Mobile stacking */
+  .entry {
+    grid-template-columns: 100px 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -285,6 +360,17 @@ h3 {
   
   .header-content {
     padding: 0 15px;
+  }
+  
+  /* CV Mobile small screens */
+  .entry {
+    grid-template-columns: 1fr;
+    row-gap: .15rem;
+  }
+  
+  .entry-year {
+    order: -1;
+    margin-bottom: .1rem;
   }
 }
 
