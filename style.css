@@ -1,4 +1,8 @@
 /* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #000;
@@ -14,15 +18,20 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
   z-index: 1000;
-  box-sizing: border-box;
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
   border-bottom: none;
   height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
 .logo {
@@ -31,12 +40,17 @@ header {
   letter-spacing: 1px;
 }
 
+nav {
+  display: flex;
+}
+
 nav a {
   margin-left: 30px;
   text-decoration: none;
   color: #000;
   font-size: 14px;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 nav a:hover {
@@ -56,8 +70,8 @@ nav a:hover {
 
 .hero-container {
   position: relative;
-  width: 200%; /* Makes the image wider than viewport */
-  height: 200%; /* Makes the image taller than viewport */
+  width: 200%;
+  height: 200%;
 }
 
 .hero-image {
@@ -72,13 +86,15 @@ nav a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 6vw; /* Reduced from 10vw to fit better */
+  font-size: 4.5vw;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   z-index: 100;
   pointer-events: none;
   text-align: center;
   white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
 }
 
 /* Work Section */
@@ -86,7 +102,7 @@ nav a:hover {
   max-width: 1200px;
   margin: 120px auto 80px;
   padding: 0 20px;
-  display: none; /* Initially hidden */
+  display: none;
 }
 
 .work-grid {
@@ -143,7 +159,7 @@ nav a:hover {
   max-width: 900px;
   margin: 120px auto 80px;
   padding: 0 20px;
-  display: none; /* Initially hidden */
+  display: none;
 }
 
 h2, h3 {
@@ -165,6 +181,7 @@ h3 {
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #000;
+  cursor: pointer;
 }
 
 #contact a:hover {
@@ -178,8 +195,11 @@ section.active {
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
+  .header-content {
+    padding: 0 20px;
+  }
+  
   header {
-    padding: 15px 20px;
     height: 70px;
   }
   
@@ -189,7 +209,9 @@ section.active {
   }
   
   .hero-name {
-    font-size: 10vw;
+    font-size: 7vw;
+    letter-spacing: 2px;
+    width: 95%;
   }
   
   .work-grid {
@@ -199,5 +221,22 @@ section.active {
   
   #work, #cv, #contact {
     margin: 100px auto 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 9vw;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  
+  nav a {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+  
+  .header-content {
+    padding: 0 15px;
   }
 }
