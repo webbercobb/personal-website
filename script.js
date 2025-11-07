@@ -4,8 +4,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     e.preventDefault();
     const targetSection = e.target.getAttribute('data-section');
     
-    console.log('Clicked:', targetSection); // Debug log
-    
     // Hide all sections
     document.querySelectorAll('section').forEach(section => {
       section.classList.remove('active');
@@ -15,9 +13,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     const targetElement = document.getElementById(targetSection);
     if (targetElement) {
       targetElement.classList.add('active');
-      console.log('Showing section:', targetSection); // Debug log
-    } else {
-      console.error('Section not found:', targetSection); // Debug log
     }
   });
 });
