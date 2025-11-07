@@ -35,9 +35,10 @@ header {
 }
 
 .logo {
-  font-size: 14px; /* CHANGED from 18px to match nav links */
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 14px; /* Same as nav links */
+  font-weight: normal; /* CHANGED: removed bold */
+  letter-spacing: 0px; /* CHANGED: removed letter-spacing */
+  text-transform: none; /* Ensure no text transformation */
 }
 
 nav {
@@ -49,6 +50,8 @@ nav a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0px;
   transition: opacity 0.3s ease;
   cursor: pointer;
   font-family: 'Michroma', sans-serif;
@@ -223,7 +226,9 @@ h3 {
   }
   
   .logo {
-    font-size: 12px; /* CHANGED to match mobile nav links */
+    font-size: 12px; /* Same as mobile nav links */
+    font-weight: normal; /* CHANGED: removed bold */
+    letter-spacing: 0px; /* CHANGED: removed letter-spacing */
   }
   
   .hero-name {
@@ -267,7 +272,9 @@ h3 {
   }
   
   .logo {
-    font-size: 11px; /* CHANGED to match mobile nav links */
+    font-size: 11px; /* Same as mobile nav links */
+    font-weight: normal; /* CHANGED: removed bold */
+    letter-spacing: 0px; /* CHANGED: removed letter-spacing */
   }
   
   .header-content {
@@ -286,6 +293,8 @@ h3 {
   }
   
   .logo {
-    font-size: 10px; /* CHANGED to match mobile nav links */
+    font-size: 10px; /* Same as mobile nav links */
+    font-weight: normal; /* CHANGED: removed bold */
+    letter-spacing: 0px; /* CHANGED: removed letter-spacing */
   }
 }
