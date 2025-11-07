@@ -4,13 +4,21 @@ document.querySelectorAll('.nav-link').forEach(link => {
     e.preventDefault();
     const targetSection = e.target.getAttribute('data-section');
     
+    console.log('Clicked:', targetSection); // Debug log
+    
     // Hide all sections
     document.querySelectorAll('section').forEach(section => {
       section.classList.remove('active');
     });
     
     // Show target section
-    document.getElementById(targetSection).classList.add('active');
+    const targetElement = document.getElementById(targetSection);
+    if (targetElement) {
+      targetElement.classList.add('active');
+      console.log('Showing section:', targetSection); // Debug log
+    } else {
+      console.error('Section not found:', targetSection); // Debug log
+    }
   });
 });
 
@@ -36,4 +44,16 @@ document.addEventListener('click', (e) => {
       item.classList.remove('active');
     });
   }
+});
+
+// Initialize - make sure home is active on load
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide all sections except home
+  document.querySelectorAll('section').forEach(section => {
+    if (section.id !== 'home') {
+      section.classList.remove('active');
+    } else {
+      section.classList.add('active');
+    }
+  });
 });
