@@ -72,7 +72,7 @@ nav a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 10vw;
+  font-size: 6vw; /* Reduced from 10vw to fit better */
   font-weight: bold;
   letter-spacing: 5px;
   z-index: 100;
@@ -83,7 +83,7 @@ nav a:hover {
 
 /* Work Section */
 #work {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 120px auto 80px;
   padding: 0 20px;
   display: none; /* Initially hidden */
@@ -92,7 +92,7 @@ nav a:hover {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 30px;
   margin-top: 40px;
 }
 
@@ -179,26 +179,25 @@ section.active {
 /* Responsive tweaks */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 15px 20px;
-    height: auto;
-  }
-  
-  nav {
-    margin-top: 10px;
+    height: 70px;
   }
   
   nav a {
-    margin-left: 0;
-    margin-right: 20px;
+    margin-left: 15px;
+    font-size: 13px;
   }
   
   .hero-name {
-    font-size: 15vw;
+    font-size: 10vw;
   }
   
   .work-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  #work, #cv, #contact {
+    margin: 100px auto 60px;
   }
 }
