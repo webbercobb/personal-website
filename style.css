@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Michroma', sans-serif;
   color: #000;
   background-color: #fff;
   margin: 0;
@@ -197,21 +197,32 @@ section.active {
 @media (max-width: 768px) {
   .header-content {
     padding: 0 20px;
+    flex-direction: row; /* Ensure logo and nav stay in one line */
+    justify-content: space-between;
   }
   
   header {
     height: 70px;
   }
   
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
   nav a {
     margin-left: 15px;
-    font-size: 13px;
+    font-size: 12px;
+    white-space: nowrap;
   }
   
   .hero-name {
-    font-size: 7vw;
+    font-size: 8vw;
     letter-spacing: 2px;
     width: 95%;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 0 10px;
   }
   
   .work-grid {
@@ -226,17 +237,29 @@ section.active {
 
 @media (max-width: 480px) {
   .hero-name {
-    font-size: 9vw;
+    font-size: 10vw;
     white-space: normal;
     line-height: 1.2;
+    padding: 0 15px;
   }
   
   nav a {
-    margin-left: 12px;
-    font-size: 12px;
+    margin-left: 10px;
+    font-size: 11px;
   }
   
   .header-content {
     padding: 0 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-name {
+    font-size: 11vw;
+  }
+  
+  nav a {
+    margin-left: 8px;
+    font-size: 10px;
   }
 }
