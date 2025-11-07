@@ -309,4 +309,279 @@ h3 {
   .logo {
     font-size: 10px;
   }
+}    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0.98) 8%,
+    rgba(255,255,255,0.96) 16%,
+    rgba(255,255,255,0.92) 24%,
+    rgba(255,255,255,0.86) 32%,
+    rgba(255,255,255,0.78) 40%,
+    rgba(255,255,255,0.68) 48%,
+    rgba(255,255,255,0.56) 56%,
+    rgba(255,255,255,0.44) 64%,
+    rgba(255,255,255,0.32) 72%,
+    rgba(255,255,255,0.22) 80%,
+    rgba(255,255,255,0.14) 88%,
+    rgba(255,255,255,0.08) 96%,
+    rgba(255,255,255,0) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+nav a:hover, nav a.active {
+  opacity: 0.7;
+}
+
+/* Homepage Hero Section */
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300vw;
+  height: 300vh;
+  min-width: 3000px;
+  min-height: 3000px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-name {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5vw;
+  font-weight: bold;
+  letter-spacing: 3px;
+  z-index: 100;
+  pointer-events: none;
+  text-align: center;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+}
+
+/* Work Section */
+#work-content {
+  max-width: 1200px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.work-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.work-item img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  pointer-events: none;
+}
+
+.overlay-text {
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.work-item.active img {
+  opacity: 0.4;
+}
+
+.work-item.active .overlay {
+  opacity: 1;
+}
+
+/* CV and Contact Sections */
+#cv-content, #contact-content {
+  max-width: 900px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+}
+
+h2, h3 {
+  font-weight: normal;
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#contact-content a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+#contact-content a:hover {
+  opacity: 0.7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 20px;
+  }
+  
+  header {
+    height: 70px;
+  }
+  
+  .header-gradient {
+    height: 70px;
+    background: linear-gradient(to bottom, 
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.98) 10%,
+      rgba(255,255,255,0.96) 20%,
+      rgba(255,255,255,0.92) 30%,
+      rgba(255,255,255,0.86) 40%,
+      rgba(255,255,255,0.78) 50%,
+      rgba(255,255,255,0.68) 60%,
+      rgba(255,255,255,0.56) 70%,
+      rgba(255,255,255,0.44) 80%,
+      rgba(255,255,255,0.32) 90%,
+      rgba(255,255,255,0.22) 95%,
+      rgba(255,255,255,0) 100%);
+  }
+  
+  nav a {
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  
+  .logo {
+    font-size: 12px;
+  }
+  
+  .hero-name {
+    font-size: 8vw;
+    width: 95%;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 0 10px;
+  }
+  
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  #work-content, #cv-content, #contact-content {
+    margin: 100px auto 60px;
+  }
+  
+  .hero-container {
+    width: 400vw;
+    height: 400vh;
+    min-width: 2000px;
+    min-height: 2000px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 10vw;
+    padding: 0 15px;
+  }
+  
+  nav a {
+    margin-left: 10px;
+    font-size: 11px;
+  }
+  
+  .logo {
+    font-size: 11px;
+  }
+  
+  .header-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-name {
+    font-size: 11vw;
+  }
+  
+  nav a {
+    margin-left: 8px;
+    font-size: 10px;
+  }
+  
+  .logo {
+    font-size: 10px;
+  }
 }
