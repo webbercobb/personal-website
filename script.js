@@ -30,4 +30,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log('Work page initialization complete');
     }
+    
+    // Homepage image loading and scrolling enhancement
+    if (document.querySelector('#home')) {
+        console.log('Homepage loaded - enhancing image display');
+        
+        // Ensure the homepage image loads properly and allows scrolling
+        const heroImage = document.querySelector('.hero-image');
+        if (heroImage) {
+            heroImage.onload = function() {
+                console.log('Homepage image loaded successfully');
+                // You can add any homepage-specific image handling here
+            };
+            
+            // If image fails to load, log it
+            heroImage.onerror = function() {
+                console.error('Homepage image failed to load');
+            };
+        }
+    }
 });
