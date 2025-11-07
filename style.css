@@ -54,7 +54,7 @@ nav a {
   font-family: 'Michroma', sans-serif;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
   opacity: 0.7;
 }
 
@@ -100,11 +100,10 @@ nav a:hover {
 }
 
 /* Work Section */
-#work {
+#work-content {
   max-width: 1200px;
   margin: 120px auto 80px;
   padding: 0 20px;
-  display: none;
 }
 
 .work-grid {
@@ -158,11 +157,10 @@ nav a:hover {
 }
 
 /* CV and Contact Sections */
-#cv, #contact {
+#cv-content, #contact-content {
   max-width: 900px;
   margin: 120px auto 80px;
   padding: 0 20px;
-  display: none;
 }
 
 h2, h3 {
@@ -181,11 +179,11 @@ h3 {
   margin-bottom: 15px;
 }
 
-#cv p, #contact p {
+#cv-content p, #contact-content p {
   font-family: 'Michroma', sans-serif;
 }
 
-#contact a {
+#contact-content a {
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #000;
@@ -193,17 +191,8 @@ h3 {
   font-family: 'Michroma', sans-serif;
 }
 
-#contact a:hover {
+#contact-content a:hover {
   opacity: 0.7;
-}
-
-/* Active Section */
-section {
-  display: none;
-}
-
-section.active {
-  display: block;
 }
 
 /* Responsive tweaks */
@@ -243,7 +232,7 @@ section.active {
     gap: 20px;
   }
   
-  #work, #cv, #contact {
+  #work-content, #cv-content, #contact-content {
     margin: 100px auto 60px;
   }
 }
