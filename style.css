@@ -53,6 +53,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  position: relative;
+  z-index: 2; /* Ensure content is above gradient */
 }
 
 .logo {
@@ -74,6 +76,8 @@ nav a {
   letter-spacing: 0px;
   transition: opacity 0.3s ease;
   cursor: pointer;
+  position: relative;
+  z-index: 3; /* Ensure links are clickable */
 }
 
 nav a:hover, nav a.active {
@@ -167,6 +171,7 @@ nav a:hover, nav a.active {
   font-size: 13px;
   line-height: 1.4;
   letter-spacing: 0.5px;
+  font-family: 'Michroma', sans-serif;
 }
 
 .work-item.active img {
@@ -281,7 +286,22 @@ nav a:hover, nav a.active {
   margin-top: 2.4rem;
 }
 
-/* Responsive tweaks */
+/* DESKTOP STYLES - Ensure everything works on desktop */
+/* These styles apply to ALL screen sizes by default */
+
+/* Make sure navigation is always clickable */
+nav a {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Ensure header content is above gradient */
+.header-content {
+  position: relative;
+  z-index: 1001;
+}
+
+/* Responsive tweaks - MOBILE ONLY */
 @media (max-width: 768px) {
   .header-content {
     padding: 0 20px;
@@ -386,5 +406,32 @@ nav a:hover, nav a.active {
   
   .logo {
     font-size: 10px;
+  }
+}
+
+/* DESKTOP SPECIFIC ENHANCEMENTS */
+@media (min-width: 769px) {
+  /* Ensure desktop navigation is properly spaced */
+  nav a {
+    margin-left: 30px;
+    font-size: 14px;
+  }
+  
+  .logo {
+    font-size: 14px;
+  }
+  
+  /* Make sure desktop header is proper height */
+  header {
+    height: 80px;
+  }
+  
+  .header-gradient {
+    height: 80px;
+  }
+  
+  /* Desktop content margins */
+  #work-content, #cv-content, #contact-content {
+    margin: 120px auto 80px;
   }
 }
