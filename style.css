@@ -220,23 +220,6 @@ nav a:hover, nav a.active {
   padding: 0 20px;
 }
 
-.cv-title h1 {
-  font-family: 'Michroma', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  font-size: clamp(22px, 4vw, 34px);
-  margin: 0 0 .25rem 0;
-  font-weight: normal;
-}
-
-.cv-title .cv-sub {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-weight: 400;
-  font-size: clamp(14px, 2vw, 16px);
-  opacity: .75;
-  margin-bottom: 2rem;
-}
-
 /* CV Section headings */
 .cv-section {
   margin-top: 2.5rem;
@@ -268,13 +251,14 @@ nav a:hover, nav a.active {
 }
 
 .entry-year {
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   letter-spacing: .06em;
   font-size: 13px;
   line-height: 1.6;
   opacity: .8;
   text-transform: uppercase;
   padding-top: 2px;
+  font-weight: 300;
 }
 
 .entry-body {
@@ -496,4 +480,4 @@ nav a {
   #work-content, #cv-content, #contact-content {
     margin: 120px auto 80px;
   }
-}p
+}
