@@ -207,6 +207,28 @@ nav a:hover, nav a.active {
   opacity: 0.7;
 }
 
+/* Contact Page Centering */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.contact-container a {
+  font-family: 'Michroma', sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.contact-container a:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
 /* CV Section - Completely Redesigned */
 #cv-content {
   max-width: none;
@@ -242,11 +264,18 @@ nav a:hover, nav a.active {
   row-gap: 1rem;
 }
 
+/* Default entry style - two columns */
 .entry {
   display: grid;
   grid-template-columns: 140px 1fr;
   column-gap: 20px;
   align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+/* Full-width entries for Education and Press */
+.entry-full-width {
+  display: block; /* Override grid */
   margin-bottom: 0.5rem;
 }
 
@@ -335,6 +364,10 @@ nav a:hover, nav a.active {
     font-size: 11px;
   }
   
+  .entry-full-width {
+    /* No changes needed for full-width on mobile */
+  }
+  
   .cv-section h2 {
     font-size: 13px;
   }
@@ -418,6 +451,12 @@ nav a {
     min-width: 2000px;
     min-height: 2000px;
   }
+  
+  /* Contact page mobile adjustments */
+  .contact-container {
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -437,6 +476,10 @@ nav a {
   
   .header-content {
     padding: 0 15px;
+  }
+  
+  .contact-container a {
+    font-size: 0.9rem;
   }
 }
 
@@ -480,44 +523,10 @@ nav a {
   #work-content, #cv-content, #contact-content {
     margin: 120px auto 80px;
   }
-  /* If an .entry has only the body (no .entry-year), let it span full width */
-.entry > .entry-body:only-child {
-  grid-column: 1 / -1;
-}
-
-/* Optional: slightly wider reading measure on desktop */
-@media (min-width: 900px) {
-  .cv-wrap { max-width: 1100px; } /* tweak to taste */
-}
-  /* CONTACT PAGE CENTERING (WITH FIXED HEADER) */
-.contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-}
-
-/* Adjust for header height */
-header {
-  height: 60px; /* or whatever your fixed header height is */
-}
-
-main.contact-container {
-  min-height: calc(100vh - 60px);
-  margin-top: 60px;
-}
-
-.contact-container a {
-  font-family: 'Michroma', sans-serif;
-  color: #000;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-}
-
-.contact-container a:hover {
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
+  
+  /* Contact page desktop adjustments */
+  .contact-container {
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+  }
 }
