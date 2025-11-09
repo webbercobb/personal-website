@@ -480,4 +480,13 @@ nav a {
   #work-content, #cv-content, #contact-content {
     margin: 120px auto 80px;
   }
+  /* If an .entry has only the body (no .entry-year), let it span full width */
+.entry > .entry-body:only-child {
+  grid-column: 1 / -1;
+}
+
+/* Optional: slightly wider reading measure on desktop */
+@media (min-width: 900px) {
+  .cv-wrap { max-width: 1100px; } /* tweak to taste */
+}
 }
