@@ -531,4 +531,7 @@ nav a {
     height: calc(100vh - 80px);
     margin-top: 80px;
   }
+  .email-link {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
 }
