@@ -19,7 +19,7 @@ Open `events.html` and edit the event details directly in the HTML.
 
 ### Adding Press Links
 
-Open `cv.html` and add new press items to the Selected Press section:
+Open `about.html` and add new press items to the Selected Press section:
 
 ```html
 <div class="press-item">
@@ -28,9 +28,9 @@ Open `cv.html` and add new press items to the Selected Press section:
 </div>
 ```
 
-### Updating CV
+### Updating About
 
-Open `cv.html` to edit:
+Open `about.html` to edit:
 
 - Education section
 - Selected Projects & Exhibitions
@@ -45,7 +45,7 @@ Open `contact.html` and update the email address.
 - **Home** (`index.html`) — Hero image and name
 - **Work** (`work.html`) — Gallery of artwork
 - **Events** (`events.html`) — Exhibition listings
-- **CV** (`cv.html`) — Resume and press
+- **About** (`about.html`) — Resume and press
 - **Contact** (`contact.html`) — Email address
 
 ## Images
