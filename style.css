@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Michroma', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   color: #000;
   background-color: #fff;
   line-height: 1.6;
@@ -347,19 +347,19 @@ nav a.active {
 .press-item {
   margin: 0;
   padding: 0;
-  line-height: 1.7;
-  font-size: 13px;
+  line-height: 1.8;
+  font-size: 15px;
   font-weight: 300;
   font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 
 /* Publication names - darker and more prominent */
 .press-publication {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
   color: #000;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 /* Press links styling - article titles (lighter, less prominent) */
@@ -369,7 +369,7 @@ nav a.active {
   border-bottom: 1px solid #000;
   transition: opacity 0.3s ease;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.7;
 }
 
@@ -513,8 +513,17 @@ nav a.active {
   }
   
   .press-item {
-    font-size: 13px;
-    line-height: 1.65;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  .press-publication {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+  
+  .press-item a {
+    font-size: 14px;
   }
 }
 
@@ -546,13 +555,18 @@ nav a.active {
   }
   
   .press-item {
-    line-height: 1.6;
-    font-size: 13px;
+    line-height: 1.65;
+    font-size: 14px;
   }
   
   .press-publication {
-    font-size: 13px;
-    letter-spacing: 0.03em;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  
+  .press-item a {
+    font-size: 14px;
   }
   
   .event-section {
@@ -626,17 +640,17 @@ nav a.active {
   
   .press-item {
     line-height: 1.6;
-    font-size: 12px;
+    font-size: 13px;
   }
   
   .press-publication {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
   }
   
   .press-item a {
-    font-size: 12px;
+    font-size: 13px;
   }
   
   .event-title {
