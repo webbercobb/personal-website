@@ -109,6 +109,7 @@ nav a:hover, nav a.active {
   height: 100%;
   object-fit: cover;
   display: block;
+  background-color: #f5f5f5;
 }
 
 .hero-name {
@@ -148,8 +149,10 @@ nav a:hover, nav a.active {
 
 .work-item img {
   width: 100%;
+  height: auto;
   display: block;
   transition: opacity 0.3s ease;
+  background-color: #f5f5f5;
 }
 
 .overlay {
@@ -246,24 +249,27 @@ nav a:hover, nav a.active {
 
 /* CV Section headings */
 .cv-section {
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.cv-section:first-child {
+  margin-top: 0;
 }
 
 .cv-section h2 {
   font-family: 'Michroma', sans-serif;
   text-transform: uppercase;
   letter-spacing: .12em;
-  font-size: clamp(14px, 1.8vw, 15px);
-  margin: 0 0 1rem 0;
+  font-size: clamp(16px, 2vw, 18px);
+  margin: 0 0 1.75rem 0;
   font-weight: normal;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 /* CV Entries: tidy grid with a date column */
 .cv-items {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 1.25rem;
 }
 
 /* Default entry style - two columns */
@@ -272,51 +278,86 @@ nav a:hover, nav a.active {
   grid-template-columns: 140px 1fr;
   column-gap: 20px;
   align-items: start;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Full-width entries for Education and Press */
 .entry-full-width {
   display: block; /* Override grid */
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .entry-year {
   font-family: 'Space Grotesk', system-ui, sans-serif;
   letter-spacing: .06em;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
   opacity: .8;
   text-transform: uppercase;
   padding-top: 2px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .entry-body {
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.8;
   letter-spacing: .01em;
   font-weight: 300;
 }
 
+/* Press grid layout - two independent columns */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+.press-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 /* Press items styling */
 .press-item {
-  margin-bottom: 0.4rem;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
+  font-size: 13px;
+  font-weight: 300;
 }
 
-.press-item:last-child {
-  margin-bottom: 0;
+/* Publication names - darker and more prominent */
+.press-publication {
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-/* CV Spacing rhythm */
-.cv-section + .cv-section {
-  margin-top: 3rem;
-}
-
-/* Press links styling */
+/* Press links styling - article titles (lighter, less prominent) */
 .press-item a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  transition: opacity 0.3s ease;
+  font-weight: 300;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.press-item a:hover {
+  opacity: 1;
+}
+
+.press-item a:hover {
+  opacity: 0.7;
+}
+
+/* CV links styling */
+.cv-link {
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #000;
@@ -324,18 +365,91 @@ nav a:hover, nav a.active {
   font-weight: 400;
 }
 
-.press-item a:hover {
+.cv-link:hover {
   opacity: 0.7;
 }
 
-/* Keep the publication names normal weight */
-.press-item {
+/* Events Section */
+#events-content {
+  max-width: none;
+  margin: 120px auto 80px;
+  padding: 0;
+}
+
+.events-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.event-section {
+  margin-top: 3.5rem;
+}
+
+.event-section:first-child {
+  margin-top: 0;
+}
+
+.event-title {
+  font-family: 'Michroma', sans-serif;
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin: 0 0 1.5rem 0;
+  font-weight: normal;
+  letter-spacing: .05em;
+  line-height: 1.3;
+}
+
+.event-date-location {
+  margin-bottom: 1.5rem;
+}
+
+.event-date {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: .01em;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.event-location {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: .01em;
   font-weight: 300;
+  opacity: 0.8;
+}
+
+.event-description {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: .01em;
+  font-weight: 300;
+  margin-top: 1.5rem;
+}
+
+.event-description p {
+  margin: 0;
+}
+
+.event-divider {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 3.5rem 0;
+  opacity: 0.25;
+  letter-spacing: 0.3em;
 }
 
 /* Responsive tweaks for CV */
 @media (max-width: 768px) {
   #cv-content {
+    margin: 100px auto 60px;
+  }
+  
+  #events-content {
     margin: 100px auto 60px;
   }
   
@@ -349,7 +463,42 @@ nav a:hover, nav a.active {
   }
   
   .entry-year {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  
+  .cv-section h2 {
+    font-size: 15px;
+  }
+  
+  .cv-section {
+    margin-top: 2.75rem;
+  }
+  
+  .press-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  
+  .press-column {
+    gap: 0.875rem;
+  }
+  
+  .event-section {
+    margin-top: 2.75rem;
+  }
+  
+  .event-title {
+    font-size: 17px;
+  }
+  
+  .event-date,
+  .event-location,
+  .event-description {
+    font-size: 14px;
+  }
+  
+  .event-divider {
+    margin: 2.75rem 0;
   }
 }
 
@@ -363,23 +512,15 @@ nav a:hover, nav a.active {
   .entry-year {
     order: -1;
     margin-bottom: 0.1rem;
-    font-size: 11px;
-  }
-  
-  .entry-full-width {
-    /* No changes needed for full-width on mobile */
-  }
-  
-  .cv-section h2 {
     font-size: 13px;
   }
   
-  .cv-section {
-    margin-top: 2rem;
+  .cv-section h2 {
+    font-size: 14px;
   }
   
-  .cv-section + .cv-section {
-    margin-top: 2.5rem;
+  .cv-section {
+    margin-top: 2.25rem;
   }
 }
 
@@ -443,7 +584,7 @@ nav a {
     gap: 20px;
   }
   
-  #work-content, #cv-content, #contact-content {
+  #work-content, #cv-content, #contact-content, #events-content {
     margin: 100px auto 60px;
   }
   
@@ -522,7 +663,7 @@ nav a {
   }
   
   /* Desktop content margins */
-  #work-content, #cv-content, #contact-content {
+  #work-content, #cv-content, #contact-content, #events-content {
     margin: 120px auto 80px;
   }
   
