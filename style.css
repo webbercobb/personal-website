@@ -264,22 +264,22 @@ nav a.active {
   line-height: 1.3;
 }
 
-/* Bio Section with Image - Side by Side Layout */
+/* Bio Section with Image - Text Wrapping Layout */
 .bio-section .bio-content {
-  display: grid;
-  grid-template-columns: minmax(300px, 420px) 1fr;
-  gap: 3rem;
-  align-items: start;
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 15px;
   line-height: 1.8;
   text-align: left;
+  display: flow-root; /* Clearfix for floated image */
 }
 
 .bio-section .bio-image {
-  width: 100%;
+  float: left;
+  width: min(420px, 45%);
   height: auto;
+  margin: 0 3rem 1.5rem 0;
   display: block;
+  shape-outside: margin-box;
 }
 
 .bio-section .bio-text p {
@@ -498,9 +498,12 @@ nav a.active {
     margin-top: 2.75rem;
   }
   
+  .bio-section .bio-image {
+    width: min(320px, 45%);
+    margin-right: 2rem;
+  }
+  
   .bio-section .bio-content {
-    grid-template-columns: minmax(260px, 320px) 1fr;
-    gap: 2rem;
     font-size: 14px;
   }
   
@@ -511,14 +514,12 @@ nav a.active {
 
 /* Medium screen - stack earlier if needed */
 @media (max-width: 900px) {
-  .bio-section .bio-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
   .bio-section .bio-image {
+    float: none;
+    width: 100%;
     max-width: 450px;
-    margin: 0 auto;
+    margin: 0 auto 2rem;
+    display: block;
   }
   
   .press-grid {
@@ -571,14 +572,15 @@ nav a.active {
   }
   
   .bio-section .bio-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
     font-size: 13px;
   }
   
   .bio-section .bio-image {
+    float: none;
+    width: 100%;
     max-width: 380px;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
+    display: block;
   }
   
   .bio-section .bio-text p {
@@ -693,16 +695,16 @@ nav a {
 /* DESKTOP SPECIFIC ENHANCEMENTS */
 /* Large Desktop - Optimize bio layout */
 @media (min-width: 1200px) {
-  .bio-section .bio-content {
-    grid-template-columns: minmax(400px, 480px) 1fr;
-    gap: 4rem;
+  .bio-section .bio-image {
+    width: min(480px, 40%);
+    margin-right: 4rem;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .bio-section .bio-content {
-    grid-template-columns: minmax(350px, 420px) 1fr;
-    gap: 3rem;
+  .bio-section .bio-image {
+    width: min(420px, 42%);
+    margin-right: 3rem;
   }
 }
 
