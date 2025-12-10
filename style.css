@@ -267,7 +267,7 @@ nav a.active {
 /* Bio Section with Image - Side by Side Layout */
 .bio-section .bio-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(300px, 420px) 1fr;
   gap: 3rem;
   align-items: start;
   font-family: 'Space Grotesk', system-ui, sans-serif;
@@ -499,13 +499,26 @@ nav a.active {
   }
   
   .bio-section .bio-content {
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: minmax(260px, 320px) 1fr;
     gap: 2rem;
     font-size: 14px;
   }
   
   .bio-section .bio-text p {
     margin-bottom: 1.25rem;
+  }
+}
+
+/* Medium screen - stack earlier if needed */
+@media (max-width: 900px) {
+  .bio-section .bio-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .bio-section .bio-image {
+    max-width: 450px;
+    margin: 0 auto;
   }
   
   .press-grid {
@@ -679,10 +692,17 @@ nav a {
 
 /* DESKTOP SPECIFIC ENHANCEMENTS */
 /* Large Desktop - Optimize bio layout */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .bio-section .bio-content {
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
+    grid-template-columns: minmax(400px, 480px) 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .bio-section .bio-content {
+    grid-template-columns: minmax(350px, 420px) 1fr;
+    gap: 3rem;
   }
 }
 
