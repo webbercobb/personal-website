@@ -13,38 +13,25 @@ body {
   overflow-x: hidden;
 }
 
-/* Fixed Header - GUARANTEED Complete Fade */
+/* Fixed Header - Modern & Sleek */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 60px;
   z-index: 1000;
   display: flex;
   align-items: center;
-  background: none;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* The gradient mask that WILL fade completely */
+/* Hide gradient overlay - no longer needed */
 .header-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to bottom, 
-    rgba(255,255,255,1) 0%,
-    rgba(255,255,255,0.95) 10%,
-    rgba(255,255,255,0.85) 20%,
-    rgba(255,255,255,0.7) 30%,
-    rgba(255,255,255,0.5) 40%,
-    rgba(255,255,255,0.3) 50%,
-    rgba(255,255,255,0.15) 60%,
-    rgba(255,255,255,0.05) 70%,
-    rgba(255,255,255,0) 80%);
-  pointer-events: none;
-  z-index: -1;
+  display: none;
 }
 
 .header-content {
@@ -54,36 +41,43 @@ header {
   align-items: center;
   padding: 0 40px;
   position: relative;
-  z-index: 2; /* Ensure content is above gradient */
+  z-index: 2;
 }
 
 .logo {
-  font-family: 'Michroma', sans-serif; /* KEPT AS MICHROMA */
-  font-size: 14px;
-  font-weight: normal;
-  letter-spacing: 0px;
+  font-family: 'Michroma', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 1;
 }
 
 nav {
   display: flex;
+  align-items: center;
 }
 
 nav a {
-  font-family: 'Space Grotesk', system-ui, sans-serif; /* CHANGED FONT */
-  margin-left: 30px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  margin-left: 32px;
   text-decoration: none;
   color: #000;
-  font-size: 14px;
-  font-weight: normal;
-  letter-spacing: 0px;
-  transition: opacity 0.3s ease;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
   cursor: pointer;
   position: relative;
-  z-index: 3; /* Ensure links are clickable */
+  opacity: 0.85;
 }
 
-nav a:hover, nav a.active {
-  opacity: 0.7;
+nav a:hover {
+  opacity: 1;
+}
+
+nav a.active {
+  opacity: 1;
+  font-weight: 500;
 }
 
 /* Homepage Hero Section */
@@ -131,7 +125,7 @@ nav a:hover, nav a.active {
 /* Work Section */
 #work-content {
   max-width: 1200px;
-  margin: 120px auto 80px;
+  margin: 100px auto 80px;
   padding: 0 20px;
 }
 
@@ -190,7 +184,7 @@ nav a:hover, nav a.active {
 /* Contact Section */
 #contact-content {
   max-width: 900px;
-  margin: 120px auto 80px;
+  margin: 100px auto 80px;
   padding: 0 20px;
 }
 
@@ -234,29 +228,33 @@ nav a:hover, nav a.active {
   transition: opacity 0.3s ease;
 }
 
-/* CV Section - Completely Redesigned */
-#cv-content {
+/* About Section - Completely Redesigned */
+#about-content {
   max-width: none;
-  margin: 120px auto 80px;
+  margin: 100px auto 80px;
   padding: 0;
 }
 
-.cv-wrap {
+.about-wrap {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* CV Section headings */
-.cv-section {
+/* About Section headings */
+.about-section {
   margin-top: 3.5rem;
 }
 
-.cv-section:first-child {
+.about-section:first-child {
   margin-top: 0;
 }
 
-.cv-section h2 {
+.bio-section {
+  margin-bottom: 4rem;
+}
+
+.about-section h2 {
   font-family: 'Michroma', sans-serif;
   text-transform: uppercase;
   letter-spacing: .12em;
@@ -266,8 +264,34 @@ nav a:hover, nav a.active {
   line-height: 1.3;
 }
 
-/* CV Entries: tidy grid with a date column */
-.cv-items {
+/* Bio Section with Image - Side by Side Layout */
+.bio-section .bio-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.bio-section .bio-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bio-section .bio-text p {
+  margin-bottom: 1.5rem;
+}
+
+.bio-section .bio-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* About Entries: tidy grid with a date column */
+.about-items {
   display: grid;
   row-gap: 1.25rem;
 }
@@ -356,8 +380,8 @@ nav a:hover, nav a.active {
   opacity: 0.7;
 }
 
-/* CV links styling */
-.cv-link {
+/* About links styling */
+.about-link {
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #000;
@@ -365,14 +389,14 @@ nav a:hover, nav a.active {
   font-weight: 400;
 }
 
-.cv-link:hover {
+.about-link:hover {
   opacity: 0.7;
 }
 
 /* Events Section */
 #events-content {
   max-width: none;
-  margin: 120px auto 80px;
+  margin: 100px auto 80px;
   padding: 0;
 }
 
@@ -443,9 +467,9 @@ nav a:hover, nav a.active {
   letter-spacing: 0.3em;
 }
 
-/* Responsive tweaks for CV */
+/* Responsive tweaks for About */
 @media (max-width: 768px) {
-  #cv-content {
+  #about-content {
     margin: 100px auto 60px;
   }
   
@@ -466,12 +490,22 @@ nav a:hover, nav a.active {
     font-size: 14px;
   }
   
-  .cv-section h2 {
+  .about-section h2 {
     font-size: 15px;
   }
   
-  .cv-section {
+  .about-section {
     margin-top: 2.75rem;
+  }
+  
+  .bio-section .bio-content {
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    font-size: 14px;
+  }
+  
+  .bio-section .bio-text p {
+    margin-bottom: 1.25rem;
   }
   
   .press-grid {
@@ -515,12 +549,27 @@ nav a:hover, nav a.active {
     font-size: 13px;
   }
   
-  .cv-section h2 {
+  .about-section h2 {
     font-size: 14px;
   }
   
-  .cv-section {
+  .about-section {
     margin-top: 2.25rem;
+  }
+  
+  .bio-section .bio-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    font-size: 13px;
+  }
+  
+  .bio-section .bio-image {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  
+  .bio-section .bio-text p {
+    margin-bottom: 1rem;
   }
 }
 
@@ -533,7 +582,7 @@ nav a {
   z-index: 1000;
 }
 
-/* Ensure header content is above gradient */
+/* Ensure header content is properly layered */
 .header-content {
   position: relative;
   z-index: 1001;
@@ -546,29 +595,16 @@ nav a {
   }
   
   header {
-    height: 70px;
-  }
-  
-  .header-gradient {
-    height: 70px;
-    background: linear-gradient(to bottom, 
-      rgba(255,255,255,1) 0%,
-      rgba(255,255,255,0.95) 15%,
-      rgba(255,255,255,0.85) 30%,
-      rgba(255,255,255,0.7) 45%,
-      rgba(255,255,255,0.5) 60%,
-      rgba(255,255,255,0.3) 75%,
-      rgba(255,255,255,0.15) 85%,
-      rgba(255,255,255,0) 95%);
+    height: 56px;
   }
   
   nav a {
-    margin-left: 15px;
+    margin-left: 20px;
     font-size: 12px;
   }
   
   .logo {
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .hero-name {
@@ -584,7 +620,7 @@ nav a {
     gap: 20px;
   }
   
-  #work-content, #cv-content, #contact-content, #events-content {
+  #work-content, #about-content, #contact-content, #events-content {
     margin: 100px auto 60px;
   }
   
@@ -597,8 +633,8 @@ nav a {
   
   /* Contact page mobile adjustments */
   .contact-container {
-    height: calc(100vh - 70px);
-    margin-top: 70px;
+    height: calc(100vh - 56px);
+    margin-top: 56px;
   }
 }
 
@@ -637,40 +673,44 @@ nav a {
   }
   
   .logo {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
 /* DESKTOP SPECIFIC ENHANCEMENTS */
+/* Large Desktop - Optimize bio layout */
+@media (min-width: 1024px) {
+  .bio-section .bio-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
+}
+
 @media (min-width: 769px) {
   /* Ensure desktop navigation is properly spaced */
   nav a {
-    margin-left: 30px;
-    font-size: 14px;
+    margin-left: 32px;
+    font-size: 13px;
   }
   
   .logo {
-    font-size: 14px;
+    font-size: 18px;
   }
   
   /* Make sure desktop header is proper height */
   header {
-    height: 80px;
-  }
-  
-  .header-gradient {
-    height: 80px;
+    height: 60px;
   }
   
   /* Desktop content margins */
-  #work-content, #cv-content, #contact-content, #events-content {
-    margin: 120px auto 80px;
+  #work-content, #about-content, #contact-content, #events-content {
+    margin: 100px auto 80px;
   }
   
   /* Contact page desktop adjustments */
   .contact-container {
-    height: calc(100vh - 80px);
-    margin-top: 80px;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
   }
   .email-link {
   font-family: 'Space Grotesk', system-ui, sans-serif;
