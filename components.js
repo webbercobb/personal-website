@@ -4,7 +4,7 @@ function createNavigation(activePage) {
     { name: 'Home', href: 'index.html' },
     { name: 'Work', href: 'work.html' },
     { name: 'Events', href: 'events.html' },
-    { name: 'CV', href: 'cv.html' },
+    { name: 'About', href: 'about.html' },
     { name: 'Contact', href: 'contact.html' }
   ];
 
@@ -17,7 +17,6 @@ function createNavigation(activePage) {
 function createHeader(activePage) {
   return `
   <header>
-    <div class="header-gradient"></div>
     <div class="header-content">
       <div class="logo">CW</div>
       <nav>
